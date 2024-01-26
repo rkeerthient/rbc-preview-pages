@@ -316,16 +316,20 @@ const Professional: Template<TemplateRenderProps> = ({
                     </div>
                   )}
                 </div>
-                <div className="w-1/3 flex flex-col gap-2">
-                  <div className="flex flex-col gap-1">
-                    <div className="font-semibold text-lg">Client Focuses</div>
-                    <div className="flex flex-col">
-                      {c_clientFocuses.map((item, index) => (
-                        <div key={item}>{C_clientFocuses[item]}</div>
-                      ))}
+                {c_clientFocuses && (
+                  <div className="w-1/3 flex flex-col gap-2">
+                    <div className="flex flex-col gap-1">
+                      <div className="font-semibold text-lg">
+                        Client Focuses
+                      </div>
+                      <div className="flex flex-col">
+                        {c_clientFocuses.map((item, index) => (
+                          <div key={item}>{C_clientFocuses[item]}</div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
                 <div className="w-1/3 flex flex-col gap-2">
                   <div className="flex flex-col gap-1">
                     <div className="font-semibold text-lg">Certifications</div>
@@ -417,28 +421,34 @@ const Professional: Template<TemplateRenderProps> = ({
                 </div>
               )}
             </div>
-            <div className="flex flex-col gap-2">
-              <div className="flex flex-col gap-1">
-                <div className="font-semibold text-lg">
-                  Volunteer Experience
-                </div>
-                <div className="flex flex-col">
-                  {c_clientFocuses.map((item, index) => (
-                    <div key={item}>{EnumData[item]}</div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="flex flex-col gap-1">
-                <div className="font-semibold text-lg">Hobbies & Interests</div>
-                <div className="flex flex-col">
-                  {c_hobbiesAndInterests.map((item, index) => (
-                    <div key={index}>{C_hobbiesAndInterests[item]}</div>
-                  ))}
+            {c_clientFocuses && (
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1">
+                  <div className="font-semibold text-lg">
+                    Volunteer Experience
+                  </div>
+                  <div className="flex flex-col">
+                    {c_clientFocuses.map((item, index) => (
+                      <div key={item}>{EnumData[item]}</div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {c_hobbiesAndInterests && (
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1">
+                  <div className="font-semibold text-lg">
+                    Hobbies & Interests
+                  </div>
+                  <div className="flex flex-col">
+                    {c_hobbiesAndInterests.map((item, index) => (
+                      <div key={index}>{C_hobbiesAndInterests[item]}</div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
