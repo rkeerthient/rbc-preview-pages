@@ -36,6 +36,7 @@ import PageLayout from "../components/page-layout";
 import ServiceAreaMap from "../components/ServiceAreaMap";
 import {
   C_clientFocuses,
+  C_hobbiesAndInterests,
   C_serviceAreas,
 } from "../types/financial_professionals";
 import PhotoCarousel from "../components/PhotoCarousel";
