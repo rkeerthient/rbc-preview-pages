@@ -25,7 +25,7 @@ const offsets = {
 const ServiceAreaMap = ({ data }: any) => {
   const [stateCodes, setStateCodes] = useState([]);
 
-  const initStates = data.c_serviceAreas;
+  const initStates = data;
   useEffect(() => {
     let x = allStates
       .filter((item: any) => initStates.includes(item.id))

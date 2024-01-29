@@ -184,7 +184,6 @@ const Team: Template<TemplateRenderProps> = ({
     uid,
   } = document;
   const [pathLink, setPathLink] = useState<string>();
-  console.log(JSON.stringify(c_associatedAdvisors));
 
   return (
     <>

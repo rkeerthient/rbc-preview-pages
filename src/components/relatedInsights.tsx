@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Image } from "@yext/pages/components";
+import { Image } from "@yext/sites-components";
 
 export default function Insights(inpData: any) {
   let data = inpData.inpData;
@@ -7,7 +7,7 @@ export default function Insights(inpData: any) {
 
   return (
     <div className="bg-white ">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-8  py-16">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl tracking-tight headColor sm:text-4xl">
