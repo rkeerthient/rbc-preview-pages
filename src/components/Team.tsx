@@ -41,8 +41,6 @@ const people = [
 ];
 
 export default function Teams(inpData: any) {
-  let data = inpData.inpData;
-  let clData = data.c_ass;
   return (
     <div className="bg-white py-24 md:py-32 lg:py-40">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">

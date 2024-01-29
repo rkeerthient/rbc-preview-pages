@@ -441,16 +441,20 @@ const Professional: Template<TemplateRenderProps> = ({
                     </div>
                   )}
                 </div>
-                <div className=" flex flex-col gap-6">
-                  <div className="flex flex-col gap-1">
-                    <div className="font-semibold text-lg">Client Focuses</div>
-                    <div className="flex flex-col font-light">
-                      {c_clientFocuses.map((item, index) => (
-                        <div key={item}>{C_clientFocuses[item]}</div>
-                      ))}
+                {c_clientFocuses && (
+                  <div className=" flex flex-col gap-6">
+                    <div className="flex flex-col gap-1">
+                      <div className="font-semibold text-lg">
+                        Client Focuses
+                      </div>
+                      <div className="flex flex-col font-light">
+                        {c_clientFocuses.map((item, index) => (
+                          <div key={item}>{C_clientFocuses[item]}</div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -506,14 +510,18 @@ const Professional: Template<TemplateRenderProps> = ({
             )}
           </div>
           <div className="flex px-4 w-1/3 flex-col gap-6">
-            <div className="flex flex-col gap-1">
-              <div className="font-semibold text-lg">Volunteer Experience</div>
-              <div className="flex flex-col font-light">
-                {c_clientFocuses.map((item, index) => (
-                  <div key={item}>{EnumData[item]}</div>
-                ))}
+            {c_clientFocuses && (
+              <div className="flex flex-col gap-1">
+                <div className="font-semibold text-lg">
+                  Volunteer Experience
+                </div>
+                <div className="flex flex-col font-light">
+                  {c_clientFocuses.map((item, index) => (
+                    <div key={item}>{EnumData[item]}</div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
             {c_awardsDashboard && (
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-1">
