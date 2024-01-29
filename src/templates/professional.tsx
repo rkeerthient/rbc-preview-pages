@@ -167,7 +167,7 @@ export const config: TemplateConfig = {
     // Defines the scope of entities that qualify for this stream.
     filter: {
       entityTypes: ["financialProfessional"],
-      entityIds: ["4635269"],
+      // entityIds: ["4635269"],
     },
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -294,7 +294,7 @@ const Professional: Template<TemplateRenderProps> = ({
         }}
       >
         <Banner
-          headshot={photoGallery[0]}
+          headshot={photoGallery}
           bannerImg={c_heroBanner}
           name={name.split("-")[0]}
           mainPhone={mainPhone}
@@ -467,11 +467,13 @@ const Professional: Template<TemplateRenderProps> = ({
           <div className="text-xl font-semibold">
             More about {c_preferredFirstName}!
           </div>
-          <div>
-            <LexicalRichText
-              serializedAST={JSON.stringify(c_expertiseCommentsRTv2.json)}
-            />
-          </div>
+          {c_expertiseCommentsRTv2 && (
+            <div>
+              <LexicalRichText
+                serializedAST={JSON.stringify(c_expertiseCommentsRTv2.json)}
+              />
+            </div>
+          )}
           <PhotoCarousel data={photoGallery}></PhotoCarousel>
         </div>
       </div>
@@ -565,7 +567,7 @@ const Professional: Template<TemplateRenderProps> = ({
         {c_associatedSolutions && <Solutions inpData={cpy}></Solutions>}
         {c_associatedBlogs && <BlogPosts inpData={cpy}></BlogPosts>}
       </div>
-      {c_serviceAreas && (
+      {/* {c_serviceAreas && (
         <div className="w-full bg-white ">
           <div className=" flex justify-between px-4 py-8 centered-container">
             <div className="w-1/2 flex justify-between items-center">
@@ -580,7 +582,7 @@ const Professional: Template<TemplateRenderProps> = ({
             </div>
           </div>
         </div>
-      )}
+      )} */}
       <div className="!bg-[#025cae] !text-white">
         {c_teamName && c_teamMembers && (
           <div className=" bg-[#f7f0e4] teamCarousel">
