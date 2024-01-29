@@ -18,22 +18,23 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
+import { LexicalRichText } from "@yext/react-components";
 import * as React from "react";
-import Hours from "../components/hours";
-import StaticMap from "../components/static-map";
-import "../index.css";
-import { Image } from "@yext/pages/components";
-import BlogPosts from "../components/relatedBlogs";
+import { useEffect, useState } from "react";
+import { EnumData } from "../components/EnumData";
+import PhotoCarousel from "../components/PhotoCarousel";
+import ServiceAreaMap from "../components/ServiceAreaMap";
+import TeamCarousel from "../components/TeamCarousel";
+import Banner from "../components/banner";
 import ClientStories from "../components/clientStories";
 import FAQs from "../components/faqs";
-import Solutions from "../components/solutions";
-import Insights from "../components/relatedInsights";
-import Schema from "../components/Schema";
-import Web2Lead from "../components/web2Lead";
-import { useEffect, useState } from "react";
-import { LexicalRichText } from "@yext/react-components";
+import Hours from "../components/hours";
 import PageLayout from "../components/page-layout";
-import ServiceAreaMap from "../components/ServiceAreaMap";
+import BlogPosts from "../components/relatedBlogs";
+import Insights from "../components/relatedInsights";
+import Solutions from "../components/solutions";
+import StaticMap from "../components/static-map";
+import "../index.css";
 import {
   C_awardsDashboard,
   C_clientFocuses,
@@ -41,10 +42,6 @@ import {
   C_hobbiesAndInterests,
   C_serviceAreas,
 } from "../types/financial_professionals";
-import PhotoCarousel from "../components/PhotoCarousel";
-import Banner from "../components/banner";
-import { EnumData } from "../components/EnumData";
-import TeamCarousel from "../components/TeamCarousel";
 
 /**
  * Required when Knowledge Graph data is used for a template.
