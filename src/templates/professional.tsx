@@ -42,6 +42,7 @@ import {
   C_hobbiesAndInterests,
   C_serviceAreas,
 } from "../types/financial_professionals";
+import ContactUs from "../components/ContactUs";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -281,9 +282,11 @@ const Professional: Template<TemplateRenderProps> = ({
       setPathLink(window.location.href);
     }
   }, []);
+  const [showPopUp, setShowPopUp] = useState(false);
 
   return (
     <PageLayout _site={_site}>
+      {showPopUp && <ContactUs showPopUp={(e) => setShowPopUp(e)} />}
       <div
         className={`bg-white py-16`}
         style={{
@@ -296,6 +299,7 @@ const Professional: Template<TemplateRenderProps> = ({
           name={name.split("-")[0]}
           mainPhone={mainPhone}
           title={name.split("-")[1]}
+          showPopUp={(e) => setShowPopUp(e)}
         ></Banner>
         <div className="centered-container flex flex-col gap-4 text-[#252525]">
           {c_template !== "HORIZON" ? (
