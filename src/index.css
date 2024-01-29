@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 .centered-container {
-  @apply mx-auto px-5 md:px-14 max-w-screen-xl;
+  @apply mx-auto px-5 md:px-14 max-w-screen-2xl;
 }
-
-/* .section {
-  @apply mt-8 mb-16;
-} */
 
 .primary-cta {
   @apply bg-sky-500 hover:bg-sky-600;
@@ -16,10 +12,6 @@
 
 .secondary-cta {
   @apply bg-sky-700 hover:bg-sky-800;
-}
-
-.headColor {
-  color: #003168;
 }
 
 .accordion__button:before {
@@ -61,10 +53,11 @@
   width: 2.5rem;
   height: 2.5rem;
   z-index: 2;
-  top: 40% !important;
+  /* top: 40% !important; */
 }
 
 .slick-list {
+  width: 80%;
   margin: 0 auto !important;
 }
 
@@ -76,9 +69,11 @@
   right: 0;
 }
 .slick-prev {
+  left: 7% !important;
   z-index: 1;
 }
 .slick-next {
+  right: 7% !important;
   z-index: 1;
 }
 
@@ -94,4 +89,5 @@
 }
 .slick-slider .slick-slide {
   padding: 0 15px;
+  height: max-content;
 }
