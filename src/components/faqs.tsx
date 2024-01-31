@@ -1,14 +1,12 @@
 import * as React from "react";
 import MarkdownView from "react-showdown";
-import { Image } from "@yext/sites-components";
 
-export default function FAQs(inpData: any) {
-  let data = inpData.inpData;
+export default function FAQs(props: any) {
+  let data = props.inpData;
   let clData = data.c_associatedFAQs;
-  let bgColor = data.bgColor;
 
   return (
-    <div className="  !text-white" style={{ background: bgColor }}>
+    <div className="  !text-white" style={{ background: props.bgColor }}>
       <div className="mx-auto px-8 py-16 pt-10">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 centered-container">
           <div className="lg:col-span-5">

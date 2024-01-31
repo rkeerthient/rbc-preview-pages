@@ -4,8 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-export default function BlogPosts(inpData: any) {
-  let data = inpData.inpData;
+export default function BlogPosts(props: any) {
+  let data = props.inpData;
   let clData = data.c_associatedBlogs;
   const settings = {
     dots: false,
@@ -41,9 +41,9 @@ export default function BlogPosts(inpData: any) {
       },
     ],
   };
-  let bgColor = data.bgColor;
+
   return (
-    <div className="  !text-white" style={{ background: bgColor }}>
+    <div className="  !text-white" style={{ background: props.bgColor }}>
       <div className="mx-auto px-8 py-16 pt-10">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl tracking-tight headColor sm:text-4xl">
