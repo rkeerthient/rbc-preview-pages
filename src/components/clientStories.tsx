@@ -13,6 +13,7 @@ export default function ClientStories(inpData: any) {
   let data = inpData.inpData;
   let clData = data.c_associatedClientStories;
   let title = inpData.title;
+  let bgColor = inpData.bgColor;
 
   const settings = {
     dots: false,
@@ -50,7 +51,7 @@ export default function ClientStories(inpData: any) {
   };
 
   return (
-    <div className="!bg-[#025cae] !text-white">
+    <div className="  !text-white" style={{ background: bgColor }}>
       <div className="mx-auto px-8 py-16 pt-10">
         <div className="mx-auto text-center">
           <h2 className="text-3xl tracking-tight">

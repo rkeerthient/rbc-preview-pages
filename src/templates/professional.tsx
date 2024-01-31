@@ -275,6 +275,7 @@ const Professional: Template<TemplateRenderProps> = ({
     photoGallery,
     hours,
     address,
+    c_color,
   } = document;
   const [pathLink, setPathLink] = useState<string>();
   useEffect(() => {
@@ -283,7 +284,7 @@ const Professional: Template<TemplateRenderProps> = ({
     }
   }, []);
   const [showPopUp, setShowPopUp] = useState(false);
-
+  let bgColor = c_color || `#025cae`;
   return (
     <PageLayout _site={_site}>
       <span
@@ -470,7 +471,7 @@ const Professional: Template<TemplateRenderProps> = ({
             </div>
           </div>
         </div>
-        <div className="w-full !bg-[#025cae] !text-white ">
+        <div className="w-full   !text-white" style={{ background: bgColor }}>
           <div className="flex flex-col gap-2 p-4 py-16 centered-container">
             <div className="text-xl font-semibold">
               More about {c_preferredFirstName}!
@@ -572,12 +573,14 @@ const Professional: Template<TemplateRenderProps> = ({
         </div>
         <div className="flex flex-col ">
           {c_associatedClientStories && (
-            <ClientStories inpData={cpy}></ClientStories>
+            <ClientStories inpData={cpy} bgColor={bgColor}></ClientStories>
           )}
           {c_associatedInsights && <Insights inpData={cpy} />}
-          {c_associatedFAQs && <FAQs inpData={cpy}></FAQs>}
+          {c_associatedFAQs && <FAQs inpData={cpy} bgColor={bgColor}></FAQs>}
           {c_associatedSolutions && <Solutions inpData={cpy}></Solutions>}
-          {c_associatedBlogs && <BlogPosts inpData={cpy}></BlogPosts>}
+          {c_associatedBlogs && (
+            <BlogPosts inpData={cpy} bgColor={bgColor}></BlogPosts>
+          )}
         </div>
         {c_serviceAreas && (
           <div className="w-full bg-white ">
@@ -595,9 +598,9 @@ const Professional: Template<TemplateRenderProps> = ({
             </div>
           </div>
         )}
-        <div className="!bg-[#025cae] !text-white">
+        <div className="  !text-white" style={{ background: bgColor }}>
           {c_teamName && c_teamMembers && (
-            <div className=" bg-[#f7f0e4] teamCarousel">
+            <div className="   teamCarousel">
               <TeamCarousel
                 teamName={c_teamName}
                 teamMembersData={c_teamMembers}

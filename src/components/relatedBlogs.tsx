@@ -41,8 +41,9 @@ export default function BlogPosts(inpData: any) {
       },
     ],
   };
+  let bgColor = data.bgColor;
   return (
-    <div className="!bg-[#025cae] !text-white">
+    <div className="  !text-white" style={{ background: bgColor }}>
       <div className="mx-auto px-8 py-16 pt-10">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl tracking-tight headColor sm:text-4xl">
@@ -71,7 +72,10 @@ export default function BlogPosts(inpData: any) {
                   <div className="flex flex-1 flex-col justify-between bg-white p-6">
                     <div className="flex-1">
                       <p className="text-sm font-medium flex gap-2">
-                        <time dateTime={data.c_datePublished} className="text-gray-600">
+                        <time
+                          dateTime={data.c_datePublished}
+                          className="text-gray-600"
+                        >
                           {post.c_datePublished}
                         </time>
                         <span aria-hidden="true">&middot;</span>

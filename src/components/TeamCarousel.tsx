@@ -9,12 +9,14 @@ type TeamProps = {
   teamName: string;
   teamDescription?: any;
   teamMembersData: any[];
+  bgColor?: string;
 };
 
 export default function TeamCarousel({
   teamName,
   teamDescription,
   teamMembersData,
+  bgColor,
 }: TeamProps) {
   const settings = {
     dots: false,
@@ -50,11 +52,14 @@ export default function TeamCarousel({
       },
     ],
   };
+
   return (
-    <div className=" bg-[#025cae]  ">
+    <div style={{ background: bgColor }}>
       <div className="mx-auto px-8 py-16">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-3xl tracking-tight my-8  sm:text-4xl ">{teamName}</h2>
+          <h2 className="text-3xl tracking-tight my-8  sm:text-4xl ">
+            {teamName}
+          </h2>
           {teamDescription && (
             <LexicalRichText
               serializedAST={JSON.stringify(teamDescription.json)}
