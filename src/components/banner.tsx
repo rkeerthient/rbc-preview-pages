@@ -32,7 +32,7 @@ const Banner = (props: Banner) => {
             className="bg-cover bg-center "
             style={{
               backgroundImage: `url("${bannerImg.url}")`,
-              height: "650px",
+              height: "500px",
             }}
           ></div>
         )}
